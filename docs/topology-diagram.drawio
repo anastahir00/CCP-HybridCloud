@@ -1,0 +1,89 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="S0DWCZZAldsAYuPxjATh" name="Page-1">
+    <mxGraphModel dx="860" dy="510" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];shape=mxgraph.cisco.sites.generic_building;sketch=0;html=1;pointerEvents=1;dashed=1;fillColor=#dae8fc;strokeColor=#1e4d78;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;fontSize=14;fontStyle=1;fontColor=#1e4d78;" value="On-premise (GNS3)&#xa;172.16.1.0/24" vertex="1">
+          <mxGeometry height="520" width="300" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="zone1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#1e4d78;strokeWidth=2;dashed=1;dashPattern=8 4;verticalAlign=top;fontSize=13;fontColor=#1e4d78;arcSize=4;" value="&lt;b&gt;On-premise (GNS3)&lt;/b&gt;&#xa;172.16.1.0/24" vertex="1">
+          <mxGeometry height="520" width="300" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1e4d78;strokeColor=#0d3060;fontColor=#ffffff;fontSize=12;fontStyle=1;" value="&lt;b&gt;Cisco Router&lt;/b&gt;&#xa;Gateway · IPsec endpoint&#xa;172.16.1.1" vertex="1">
+          <mxGeometry height="60" width="190" x="95" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007b5e;strokeColor=#004d3a;fontColor=#ffffff;fontSize=12;fontStyle=1;" value="&lt;b&gt;Ubuntu Server VM&lt;/b&gt;&#xa;On-premise server&#xa;172.16.1.10" vertex="1">
+          <mxGeometry height="60" width="190" x="95" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#666666;strokeColor=#444444;fontColor=#ffffff;fontSize=12;fontStyle=1;" value="&lt;b&gt;Management PC&lt;/b&gt;&#xa;Admin / SSH access&#xa;172.16.1.20" vertex="1">
+          <mxGeometry height="60" width="190" x="95" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#1e4d78;strokeWidth=2;fontColor=#1e4d78;fontStyle=1;fontSize=11;" target="4" value="LAN">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#888888;strokeWidth=1;dashed=1;dashPattern=4 4;fontColor=#888888;fontSize=11;" target="5" value="Mgmt">
+          <mxGeometry relative="1" x="0.3333" y="90" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="130" y="300" />
+              <mxPoint x="130" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zone2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#0f6e56;strokeWidth=2;dashed=1;dashPattern=8 4;verticalAlign=top;fontSize=13;fontColor=#0f6e56;arcSize=4;" value="&lt;b&gt;Cloud (Docker / LocalStack)&lt;/b&gt;&#xa;10.0.0.0/24" vertex="1">
+          <mxGeometry height="520" width="300" x="530" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#7d4e00;strokeColor=#4d3000;fontColor=#ffffff;fontSize=12;fontStyle=1;" value="&lt;b&gt;StrongSwan&lt;/b&gt;&lt;br&gt;IPsec endpoint (container)&lt;br&gt;10.0.0.10&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" vertex="1">
+          <mxGeometry height="60" width="190" x="585" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007b5e;strokeColor=#004d3a;fontColor=#ffffff;fontSize=12;fontStyle=1;" value="&lt;b&gt;LocalStack&lt;/b&gt;&#xa;Simulated cloud server&#xa;10.0.0.10" vertex="1">
+          <mxGeometry height="60" width="190" x="585" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#666666;strokeColor=#444444;fontColor=#ffffff;fontSize=12;fontStyle=1;" value="&lt;b&gt;Docker Bridge Network&lt;/b&gt;&#xa;Internal container gateway" vertex="1">
+          <mxGeometry height="60" width="190" x="585" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#0f6e56;strokeWidth=2;fontColor=#0f6e56;fontStyle=1;fontSize=11;" target="7" value="veth">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#888888;strokeWidth=1;dashed=1;dashPattern=4 4;fontColor=#888888;fontSize=11;" target="8" value="Bridge">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tunnel_label" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#b85000;strokeWidth=2;dashed=1;dashPattern=6 3;fontSize=12;fontColor=#7d4e00;" value="&lt;b&gt;IPsec Tunnel&lt;/b&gt;&#xa;StrongSwan · Encrypted&#xa;UDP 500 / ESP" vertex="1">
+          <mxGeometry height="60" width="170" x="355" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#b85000;strokeWidth=2.5;dashed=1;dashPattern=8 4;endArrow=block;endFill=1;startArrow=block;startFill=1;" target="tunnel_label" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="tunnel_label" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#b85000;strokeWidth=2.5;dashed=1;dashPattern=8 4;endArrow=block;endFill=1;startArrow=block;startFill=1;" target="6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#3b6d11;strokeWidth=1.5;dashed=1;dashPattern=5 4;fontColor=#3b6d11;fontStyle=2;fontSize=11;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" value="Ping test: cloud → on-premise">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="610" />
+              <mxPoint x="110" y="610" />
+            </Array>
+            <mxPoint x="600" y="330" as="sourcePoint" />
+            <mxPoint x="110" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontSize=13;" value="&lt;b&gt;Legend&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="790" x="40" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="leg1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#b85000;" value="── IPsec Tunnel (encrypted)" vertex="1">
+          <mxGeometry height="20" width="200" x="40" y="608" as="geometry" />
+        </mxCell>
+        <mxCell id="leg2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#1e4d78;" value="── LAN / veth link" vertex="1">
+          <mxGeometry height="20" width="160" x="250" y="608" as="geometry" />
+        </mxCell>
+        <mxCell id="leg3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#3b6d11;" value="- - Ping test path" vertex="1">
+          <mxGeometry height="20" width="160" x="420" y="608" as="geometry" />
+        </mxCell>
+        <mxCell id="leg4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontColor=#888888;" value="- - Management link" vertex="1">
+          <mxGeometry height="20" width="180" x="590" y="608" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
