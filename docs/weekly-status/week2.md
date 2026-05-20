@@ -1,8 +1,8 @@
-Week 2 Status Report - Problem 8: Hybrid Cloud
+# Week 2 Status Report - Problem 8: Hybrid Cloud
 
-Date: May 21, 2026  
-Team: CCP HybridCloud Team  
-Project: Problem 8 - Hybrid Cloud with IPsec  
+**Date:** May 21, 2026  
+**Team:** CCP HybridCloud Team  
+**Project:** Problem 8 - Hybrid Cloud with IPsec  
 
 ## Accomplishments
 
@@ -39,21 +39,27 @@ Project: Problem 8 - Hybrid Cloud with IPsec
 - Final report outline created
 - Video script template started
 
-## Issues / Blockers
+## Challenges / Issues
 
-| Issue | Owner | Status |
-|-------|-------|--------|
-| Docker network bridge with GNS3 | Anas | Investigating |
-| StrongSwan IPsec peer config | Talha | In Progress |
+- Docker network bridge with GNS3 - Under investigation by Anas
+- StrongSwan IPsec peer configuration - Being worked on by Talha
 
-## Next Week Goals
+## Next Week Plan (Week 3)
 
-- Complete IPsec tunnel establishment (Talha)
-- Verify connectivity between on-premise and cloud (Saim)
-- Start performance testing (Saim)
-- Update final report with implementation details (Salik)
-- Complete automation script (Nihaas)
+- Complete IPsec tunnel establishment
+- Verify connectivity between on-premise and cloud
+- Start performance testing
+- Begin security documentation
+- Update final report with implementation details
 
-## Status
+## Additional Notes
 
-✅ Week 2 In Progress
+- All team members have access to GitHub repository
+- Weekly meeting scheduled for Friday 3:00 PM
+- All Week 2 deliverables are on track
+
+## Sign-off
+
+**Salik Saeed**  
+Documentation Lead  
+CCP-HybridCloud Team
