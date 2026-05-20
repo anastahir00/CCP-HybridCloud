@@ -1,120 +1,59 @@
-\# Week 2 Status Report - Hybrid Cloud IPsec
+Week 2 Status Report - Problem 8: Hybrid Cloud
 
+Date: May 21, 2026  
+Team: CCP HybridCloud Team  
+Project: Problem 8 - Hybrid Cloud with IPsec  
 
+## Accomplishments
 
-\*\*Documentation Lead:\*\* Salik Saeed  
+### Anas (Project Lead + Network Architect)
 
-\*\*Date:\*\* 20 May 2026  
+- GNS3 topology implemented
+- Basic connectivity established between devices
+- Cisco router configured with initial IPs
+- On-premise network (172.16.1.0/24) ready
 
-\*\*Status:\*\* In Progress
+### Talha (Security Engineer)
 
+- StrongSwan installation completed
+- IPsec tunnel configuration in progress
+- Docker container network setup for cloud (10.0.0.0/24)
 
+### Nihaas (Automation Lead)
 
-\---
+- Python environment ready
+- GitHub repository structure maintained
+- Automation script template created
 
+### Saim (Testing/QA Engineer)
 
+- Test plan created
+- Basic ping tests executed
+- iPerf setup ready for performance testing
 
-\## Team Progress
+### Salik (Documentation Lead)
 
+- Week 2 status report template created
+- Folder structure organized in GitHub
+- Topology documentation file created
+- Final report outline created
+- Video script template started
 
+## Issues / Blockers
 
-| Task | Owner | Status | Notes |
+| Issue | Owner | Status |
+|-------|-------|--------|
+| Docker network bridge with GNS3 | Anas | Investigating |
+| StrongSwan IPsec peer config | Talha | In Progress |
 
-|------|-------|--------|-------|
+## Next Week Goals
 
-| GNS3 topology implementation | Anas | Completed | Topology ready |
+- Complete IPsec tunnel establishment (Talha)
+- Verify connectivity between on-premise and cloud (Saim)
+- Start performance testing (Saim)
+- Update final report with implementation details (Salik)
+- Complete automation script (Nihaas)
 
-| IPsec configuration | Talha | In Progress | StrongSwan setup |
+## Status
 
-| Testing plan | Saim | Not Started | Waiting for IPsec |
-
-| Automation script | Nihaas | Not Started | Will start next week |
-
-| Documentation | Salik | In Progress | Status report done |
-
-
-
-\---
-
-
-
-\## Completed This Week (by me)
-
-
-
-\- \[x] Week 2 status report template created
-
-\- \[x] Folder structure organized in GitHub
-
-\- \[x] topology/documentation.md created
-
-\- \[x] final-report/outline.md created
-
-\- \[x] video-script/script.md created
-
-
-
-\---
-
-
-
-\## Pending (awaiting from team)
-
-
-
-\- \[ ] GNS3 project file (awaiting from Anas)
-
-\- \[ ] Running-configs of all devices (awaiting from team)
-
-\- \[ ] Ping test results (awaiting from Saim)
-
-\- \[ ] VLAN verification screenshots (awaiting from Saim)
-
-\- \[ ] SSH login proof screenshots (awaiting from Talha)
-
-
-
-\---
-
-
-
-\## Issues / Blockers
-
-
-
-\- None so far
-
-
-
-\---
-
-
-
-\## Next Week Plan (Week 3)
-
-
-
-\- Update topology documentation with actual IPs and interfaces
-
-\- Collect configs from team and add to `/configs` folder
-
-\- Collect screenshots and add to `/screenshots` folder
-
-\- Update final report outline with team inputs
-
-
-
-\---
-
-
-
-\## Sign-off
-
-
-
-\*\*Salik Saeed\*\*  
-
-Documentation Lead  
-
-CCP-HybridCloud
-
+✅ Week 2 In Progress
