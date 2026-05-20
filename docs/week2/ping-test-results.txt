@@ -1,0 +1,3 @@
+=== PING TEST RESULTS === 
+Router - OK 
+Router - OK 
