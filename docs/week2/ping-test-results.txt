@@ -1,1 +1,67 @@
+# Test Plan – Hybrid Cloud IPsec VPN
 
+## 1. Test Objectives
+- Verify IPsec tunnel between on-premise and cloud
+- Ensure both sides can ping each other
+- Capture ESP encrypted packets in Wireshark
+
+## 2. Test Environment
+
+| Device | IP Address | Role |
+|--------|------------|------|
+| R1 | 172.16.1.1 | On-premise router |
+| Ubuntu VM | 172.16.1.10 | On-premise server |
+| Cloud Gateway | 10.0.0.1 | Cloud router |
+| Cloud Server | 10.0.0.10 | Cloud VM |
+
+## 3. Test Cases
+
+### TC-01: On-premise to Cloud Ping
+**Steps:**
+1. Confirm IPsec tunnel is up
+2. Run `ping 10.0.0.1` on R1 console
+3. Check reply
+
+**Expected Result:** `!!!!!` or `Reply from 10.0.0.1`
+
+### TC-02: Cloud to On-premise Ping
+**Steps:**
+1. Run `ping 172.16.1.1` on cloud gateway console
+2. Check reply
+
+**Expected Result:** Ping successful
+
+### TC-03: Wireshark ESP Packet Capture
+**Steps:**
+1. Select vEthernet interface in Wireshark
+2. Apply filter `esp`
+3. Start capture
+4. Send ping from both sides
+5. ESP packets will be captured
+
+**Expected Result:** Green/blue ESP packets visible
+
+### TC-04: Show Crypto IPsec SA
+**Steps:**
+1. Run `show crypto ipsec sa` on R1 console
+2. Check output
+
+**Expected Result:** SPI, encryption algorithm, tunnel details visible
+
+## 4. Pass/Fail Criteria
+- **Pass:** Ping reply received, ESP packets captured, SA details shown
+- **Fail:** Timeout, no ESP packets, empty SA
+
+## 5. Tools Required
+- GNS3 (R1 router, Ubuntu VM)
+- Wireshark
+- Docker / LocalStack (cloud side)
+
+## 6. Test Schedule
+
+| Test Case | Week | Status |
+|-----------|------|--------|
+| TC-01 | Week 2 | Pending |
+| TC-02 | Week 2 | Pending |
+| TC-03 | Week 3 | Pending |
+| TC-04 | Week 2 | Pending |
