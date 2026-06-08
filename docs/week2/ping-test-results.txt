@@ -1,86 +1,29 @@
-<<<<<<< Updated upstream
-# Test Plan – Hybrid Cloud IPsec VPN
+PING TEST RESULTS - WEEK 2
+===========================
+Date: June 8, 2026
+Team: CCP-HybridCloud
+Project: Problem 8 - Hybrid Cloud
 
-## 1. Test Objectives
-- Verify IPsec tunnel between on-premise and cloud
-- Ensure both sides can ping each other
-- Capture ESP encrypted packets in Wireshark
+TEST MATRIX
+===========
 
-## 2. Test Environment
++------------------+------------------+------------------+--------+----------------+
+| Source           | Destination      | IP Address       | Result | Packet Loss    |
++------------------+------------------+------------------+--------+----------------+
+| Ubuntu VM        | Router (R1)      | 172.16.1.1       | ✅ PASS | 0% (4/4)      |
+| Router (R1)      | Ubuntu VM        | 172.16.1.10      | ✅ PASS | 0% (5/5)      |
+| Docker Container | Router (R1)      | 10.0.0.1         | ✅ PASS | 0% (4/4)      |
+| Router (R1)      | Docker Container | 10.0.0.10        | ❌ FAIL | 100% (0/5)    |
++------------------+------------------+------------------+--------+----------------+
 
-| Device | IP Address | Role |
-|--------|------------|------|
-| R1 | 172.16.1.1 | On-premise router |
-| Ubuntu VM | 172.16.1.10 | On-premise server |
-| Cloud Gateway | 10.0.0.1 | Cloud router |
-| Cloud Server | 10.0.0.10 | Cloud VM |
+LIMITATION DOCUMENTATION
+========================
 
-## 3. Test Cases
+Router to Docker container ping failed due to Hyper-V Internal switch 
+isolation on Windows host. This is a known Windows networking limitation, 
+not a configuration error.
 
-### TC-01: On-premise to Cloud Ping
-**Steps:**
-1. Confirm IPsec tunnel is up
-2. Run `ping 10.0.0.1` on R1 console
-3. Check reply
+Full bidirectional connectivity will be achieved in Week 3 via IPsec tunnel.
 
-**Expected Result:** `!!!!!` or `Reply from 10.0.0.1`
-
-### TC-02: Cloud to On-premise Ping
-**Steps:**
-1. Run `ping 172.16.1.1` on cloud gateway console
-2. Check reply
-
-**Expected Result:** Ping successful
-
-### TC-03: Wireshark ESP Packet Capture
-**Steps:**
-1. Select vEthernet interface in Wireshark
-2. Apply filter `esp`
-3. Start capture
-4. Send ping from both sides
-5. ESP packets will be captured
-
-**Expected Result:** Green/blue ESP packets visible
-
-### TC-04: Show Crypto IPsec SA
-**Steps:**
-1. Run `show crypto ipsec sa` on R1 console
-2. Check output
-
-**Expected Result:** SPI, encryption algorithm, tunnel details visible
-
-## 4. Pass/Fail Criteria
-- **Pass:** Ping reply received, ESP packets captured, SA details shown
-- **Fail:** Timeout, no ESP packets, empty SA
-
-## 5. Tools Required
-- GNS3 (R1 router, Ubuntu VM)
-- Wireshark
-- Docker / LocalStack (cloud side)
-
-## 6. Test Schedule
-
-| Test Case | Week | Status |
-|-----------|------|--------|
-| TC-01 | Week 2 | Pending |
-| TC-02 | Week 2 | Pending |
-| TC-03 | Week 3 | Pending |
-| TC-04 | Week 2 | Pending |
-=======
-# Ping Test Results - Week 2
-
-## Router to Ubuntu VM
-- Source: Router (10.0.0.1 / 172.16.1.1)
-- Destination: Ubuntu VM (172.16.1.10)
-- Result: Pending (Ubuntu VM not yet configured)
-
-## Router to Cloud
-- Source: Router (10.0.0.1)
-- Destination: Docker Container (10.0.0.10)
-- Result: Pending
-
-## Notes
-- Router FastEthernet0/0: 10.0.0.1 ✅ up/up
-- Router FastEthernet1/0: 172.16.1.1 ✅ up/up (after Ubuntu connected)
-- Ubuntu VM setup in progress
->>>>>>> Stashed changes
+Team Lead: Muhammad Anas Tahir
+Date: June 8, 2026
