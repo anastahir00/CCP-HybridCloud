@@ -1,6 +1,39 @@
-"*.docx" 
-"*.txt" 
-"create_documentation*.py" 
-"*.docx" 
-"*.txt" 
-"create_documentation*.py" 
+# Word & Text files
+*.docx
+*.txt
+
+# Documentation generation scripts
+create_documentation*.py
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs & Temp
+*.log
+*.tmp
+
+# Network / Security (important!)
+*.pcap
+*.key
+*.pem
+*.cert
+
+# Python
+__pycache__/
+*.pyc
+venv/
+env/
+
+# Sensitive configs
+*.env
+config.ini
+credentials.json
+
+# GNS3
+*.gns3
