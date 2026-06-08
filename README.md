@@ -36,13 +36,13 @@ Hybrid Cloud connecting **on-premise network (GNS3)** to **cloud (Docker)** via 
 ```
 CCP-HybridCloud/
 ├── docs/ # Architecture, IP plans, weekly reports
-├── src/ # Scripts and automation code
+├── src/
 │ └── scripts/ # Python automation scripts
 ├── pcaps/ # Wireshark packet captures
 ├── security/ # Security documentation and configs
 ├── assets/ # Diagrams and screenshots
-├── README.md # This file
-└── .gitignore # Git ignore rules
+├── README.md
+└── .gitignore
 ```
 ---
 
