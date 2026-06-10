@@ -1,0 +1,16 @@
+! NAT Configuration - Week 4
+! Date: June 10, 2026
+
+! Inside and Outside interfaces
+interface FastEthernet1/0
+ ip nat inside
+exit
+interface FastEthernet2/0
+ ip nat outside
+exit
+
+! NAT rule
+ip nat inside source list 1 interface FastEthernet2/0 overload
+
+! Access list for NAT
+access-list 1 permit 172.16.1.0 0.0.0.255
