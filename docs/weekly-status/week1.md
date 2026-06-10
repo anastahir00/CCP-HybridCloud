@@ -16,20 +16,20 @@
 - [x] IP addressing plan created
 
 ### Talha (Security Engineer)
-- [ ] StrongSwan researched
-- [ ] IPsec documentation started
+- StrongSwan researched ✅ Completed
+- IPsec documentation started ✅ Completed
 
 ### Nihaas (Automation Lead)
-- [x] GitHub access confirmed
-- [ ] Python backup script template started
+- GitHub access confirmed ✅ Completed
+- Python backup script template started ✅ Completed
 
 ### Saim (Testing/QA)
-- [ ] Wireshark installed
-- [ ] Test plan started
+- Wireshark installed ✅ Completed
+- Test plan started ✅ Completed
 
 ### Salik (Documentation Lead)
-- [ ] Team charter drafted
-- [ ] Report template created
+- Team charter drafted ✅ Completed
+- Report template created ✅ Completed
 
 ## Issues / Blockers
 
