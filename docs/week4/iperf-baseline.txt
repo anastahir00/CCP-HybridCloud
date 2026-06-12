@@ -1,0 +1,15 @@
+Performance Baseline Test - Week 4
+Date: June 10, 2026
+Tool: ping (iPerf3 unavailable - no external connectivity due to Hyper-V)
+Source: Ubuntu VM (172.16.1.10)
+Destination: Cisco Router (172.16.1.1)
+
+Results:
+- Min RTT:  6.76 ms
+- Avg RTT:  18.13 ms
+- Max RTT:  50.14 ms
+- Packet Loss: 0% (5/5 packets)
+
+Note: iPerf3 could not be installed due to Ubuntu VM having no internet access (DNS resolution failing for archive.ubuntu.com). This is a known Hyper-V/network isolation limitation documented in Week 3.
+
+Performance under current conditions is acceptable with 0% packet loss and sub-20ms average latency.
